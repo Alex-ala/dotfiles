@@ -84,6 +84,8 @@ tmux_conf_copy_to_os_clipboard=false
 set -g mouse on
 set-option -g allow-rename off
 set -g pane-border-status
+setw -g mode-keys vi
+set-environment -g PATH "/usr/local/bin:/bin:/usr/bin"
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin 'tmux-plugins/cpu'
@@ -91,6 +93,8 @@ set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
 set -g @plugin 'tmux-plugins/tmux-sidebar'
 set -g @plugin 'odedlaz/tmux-onedark-theme'
+set -g @resurrect-save 'S'
+set -g @resurrect-restore 'R'
 bind-key r command-prompt 'rename-window %%'
 bind-key s setw synchronize-panes
 run '~/.tmux/plugins/tpm/tpm'
