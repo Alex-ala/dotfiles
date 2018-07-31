@@ -26,4 +26,8 @@ alias prettyjson='python -m json.tool'
 alias pw="strings /dev/urandom | grep -o '[[:alnum:]]' | head -n 30 | tr -d '\n'; echo"
 alias gs="git stash"
 alias gsa="git stash apply"
-alias gco="git checkout"
+alias gc="git checkout"
+alias gl='git log --graph --full-history --all --color --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'''
+alias vi="vim"
+unalias rm
+
